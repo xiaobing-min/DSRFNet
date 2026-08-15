@@ -24,8 +24,6 @@ Foggy-UAVCD/
     `-- list/
 ```
 
-Set the dataset root in `configs/foggy_uavcd.yaml` or in the corresponding training and testing scripts.
-
 ### Public Benchmarks
 
 The manuscript also evaluates DSRF-Net on the following public datasets:
