@@ -1,3 +1,4 @@
+python==3.10
 matplotlib==3.5.0
 numpy==1.21.2
 opencv_python==4.5.4.60
