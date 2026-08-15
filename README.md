@@ -38,6 +38,4 @@ The manuscript also evaluates DSRF-Net on the following public datasets:
 - MAHCD
 - MT-Wuhan
 
-Please obtain these datasets from their official sources and comply with their respective licenses and terms of use. Dataset preprocessing and split files should be documented under `datasets/`.
-
-数据集下载链接: https://pan.baidu.com/s/1wTyGVvRwN1Dxgr2RjsOF3Q?pwd=1124 提取码: 1124 # DSRFNet
+Please obtain these datasets from their official sources and comply with their respective licenses and terms of use. 
