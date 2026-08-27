@@ -205,13 +205,11 @@ def trainValidateSegmentation(args):
     args.vis_dir = args.savedir + '/Vis/'
 
     if args.file_root == 'LEVIR':
-        args.file_root = '/home/hxw/Datasat/LEVIR_CD_256'
+        args.file_root = ''
     elif args.file_root == 'uav-rs':
-        args.file_root = '/home/hxw/data/split_result'
-        #args.file_root = '/home/hxw/ori_uav_RS/10/uav-rs'
-        #args.file_root = '/home/hxw/ori_uav_RS/7/uav-rs'
+        args.file_root = ''
     elif args.file_root == 'SYSU':
-        args.file_root = '/home/hxw/Datasat/SYSU-CD'
+        args.file_root = ''
     else:
         raise TypeError('%s has not defined' % args.file_root)
 
