@@ -183,7 +183,7 @@ The code is provided for academic research. A formal software license file is no
 
 - Xiu-Wen Huang: [hxw@stu.ahu.edu.cn](mailto:hxw@stu.ahu.edu.cn)
 - Qing-Ling Shu：[sql@stu.ahu.edu.cn](mailto:sql@stu.ahu.edu.cn)
-- Si-Bao Chen: [sbchen@ahu.edu.cn](mailto:sbchen@ahu.edu.cn)
+
 
 
 
