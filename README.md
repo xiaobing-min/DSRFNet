@@ -1,45 +1,3 @@
-Dataset Preparation
-
-### Foggy-UAVCD
-
-Download Foggy-UAVCD from (https://pan.baidu.com/s/1wTyGVvRwN1Dxgr2RjsOF3Q?pwd=1124 提取码: 1124 # DSRFNet
-) and organize it as follows:
-
-```text
-Foggy-UAVCD/
-|-- train/
-|   |-- A/          # Pre-change satellite images
-|   |-- B/          # Post-change foggy UAV images
-|   |-- label/      # Binary change labels
-|   `-- list/       # Training file lists
-|-- val/
-|   |-- A/
-|   |-- B/
-|   |-- label/
-|   `-- list/
-`-- test/
-    |-- A/
-    |-- B/
-    |-- label/
-    `-- list/
-```
-
-### Public Benchmarks
-
-The manuscript also evaluates DSRF-Net on the following public datasets:
-
-- LEVIR-CD
-- SYSU-CD
-- WHU-CD
-- XiongAn
-- HTCD
-- MAHCD
-- MT-Wuhan
-
-Please obtain these datasets from their official sources and comply with their respective licenses and terms of use. 
-
-
-
 # Foggy-UAVCD and DSRF-Net
 
 <p align="center">
@@ -185,19 +143,6 @@ The best model is selected by validation F1 score. The four decoder predictions 
 
 The accepted paper reports the following common experimental protocol:
 
-| Setting | Paper configuration | Current script default |
-|---|---:|---:|
-| GPU | 1 x RTX 3090 | CUDA GPU |
-| Optimizer | AdamW | Adam |
-| Initial learning rate | 1e-4 | 5e-4 |
-| Weight decay | 0.01 | 1e-4 |
-| Batch size | 32 | 32 |
-| Iterations | 40,000 | 40,000 |
-| Augmentation | Random flip + photometric distortion | See `Transforms.py` |
-| Objective | Multi-scale BCE + Dice | Multi-scale BCE + Dice |
-
-For exact paper reproduction, align the optimizer block in `tools/train.py` with the paper configuration. The command above intentionally matches the defaults in the released script.
-
 ## Evaluation
 
 The testing script looks for `best_model.pth` in the result directory determined by `--file_root`, `--max_steps`, and `--lr`. Keep these arguments identical to training:
@@ -213,27 +158,6 @@ Pretrained weights are not bundled in the current repository snapshot. Place a c
 ```text
 results_uav-rs_iter_40000_lr_0.0005/best_model.pth
 ```
-
-## Main Results
-
-All values are percentages. Results are reported in the accepted paper.
-
-| Dataset | IoU | F1 | Recall | Precision |
-|---|---:|---:|---:|---:|
-| **Foggy-UAVCD** | **76.95** | **86.98** | 85.17 | **88.86** |
-| XiongAn | 68.68 | 81.44 | 79.73 | 83.22 |
-| HTCD | 91.78 | 95.72 | 93.56 | 97.97 |
-| MAHCD | 85.25 | 92.04 | 90.88 | 93.23 |
-| MT-Wuhan | 40.18 | 57.33 | 56.97 | 57.70 |
-| LEVIR-CD | 84.50 | 91.60 | 91.35 | 91.85 |
-| SYSU-CD | 72.13 | 83.81 | 82.15 | 85.53 |
-| WHU-CD | 89.67 | 94.55 | 92.73 | 96.44 |
-
-On Foggy-UAVCD, results over repeated runs are **76.95 +/- 0.20 IoU** and **86.98 +/- 0.13 F1**. DSRF-Net also retains 75.61 IoU under unseen Gaussian blur and 75.37 IoU under unseen motion blur.
-
-## Limitations
-
-Foggy-UAVCD uses physics-inspired synthetic fog. Although it models contrast decay and spatially non-uniform occlusion, it cannot capture every optical effect of natural fog. Broader validation across geographic regions, climate zones, and seasons remains important.
 
 ## Citation
 
@@ -258,6 +182,7 @@ The code is provided for academic research. A formal software license file is no
 ## Contact
 
 - Xiu-Wen Huang: [hxw@stu.ahu.edu.cn](mailto:hxw@stu.ahu.edu.cn)
+- Qing-Ling Shu：[sql@stu.ahu.edu.cn](mailto:sql@stu.ahu.edu.cn)
 - Si-Bao Chen: [sbchen@ahu.edu.cn](mailto:sbchen@ahu.edu.cn)
 
 
