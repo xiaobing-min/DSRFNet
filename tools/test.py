@@ -126,7 +126,7 @@ def ValidateSegmentation(args):
     elif args.file_root == 'uav-rs':
         args.file_root = '/home/hxw/data/split_result'
     elif args.file_root == 'SYSU':
-        args.file_root = '/home/guan/Documents/Datasets/ChangeDetection/SYSU'
+        args.file_root = '/home/hxw/Datasat/SYSU-CD'
     elif args.file_root == 'CDD':
         args.file_root = '/home/guan/Documents/Datasets/ChangeDetection/CDD'
     elif args.file_root == 'testLEVIR':
