@@ -31,7 +31,6 @@ def BCEDiceLoss(inputs, targets):
 
 
 def BCE(inputs, targets):
-    # print(inputs.shape, targets.shape)
     bce = F.binary_cross_entropy(inputs, targets)
     return bce
 
@@ -121,16 +120,15 @@ def ValidateSegmentation(args):
     args.vis_dir = './Predict/' + args.file_root + '/'
 
     if args.file_root == 'LEVIR':
-        args.file_root = '../samples'
-        # args.file_root = '/home/hxw/Datasat/LEVIR_CD'
+        args.file_root = ''
     elif args.file_root == 'uav-rs':
-        args.file_root = '/home/hxw/data/split_result'
+        args.file_root = ''
     elif args.file_root == 'SYSU':
-        args.file_root = '/home/hxw/Datasat/SYSU-CD'
+        args.file_root = ''
     elif args.file_root == 'CDD':
-        args.file_root = '/home/hxw/Datasat/CDD'
+        args.file_root = ''
     elif args.file_root == 'testLEVIR':
-        args.file_root = '../samples'
+        args.file_root = ''
     else:
         raise TypeError('%s has not defined' % args.file_root)
 
