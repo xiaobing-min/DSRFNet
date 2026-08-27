@@ -122,7 +122,7 @@ def ValidateSegmentation(args):
 
     if args.file_root == 'LEVIR':
         args.file_root = '../samples'
-        # args.file_root = '/home/guan/Documents/Datasets/ChangeDetection/LEVIR-CD_256_patches'
+        # args.file_root = '/home/hxw/Datasat/LEVIR_CD'
     elif args.file_root == 'uav-rs':
         args.file_root = '/home/hxw/data/split_result'
     elif args.file_root == 'SYSU':
