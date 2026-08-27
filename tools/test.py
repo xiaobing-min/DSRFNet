@@ -128,7 +128,7 @@ def ValidateSegmentation(args):
     elif args.file_root == 'SYSU':
         args.file_root = '/home/hxw/Datasat/SYSU-CD'
     elif args.file_root == 'CDD':
-        args.file_root = '/home/guan/Documents/Datasets/ChangeDetection/CDD'
+        args.file_root = '/home/hxw/Datasat/CDD'
     elif args.file_root == 'testLEVIR':
         args.file_root = '../samples'
     else:
