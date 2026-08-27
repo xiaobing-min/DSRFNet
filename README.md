@@ -94,7 +94,7 @@ Clone the repository and create an isolated environment:
 ```bash
 git clone https://github.com/xiaobing-min/DSRFNet.git
 cd DSRFNet
-conda create -n dsrfnet python=3.8 -y
+conda create -n dsrfnet python=3.10 -y
 conda activate dsrfnet
 ```
 
