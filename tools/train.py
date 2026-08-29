@@ -366,7 +366,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_workers', type=int, default=1, help='No. of parallel threads')
     parser.add_argument('--batch_size', type=int, default=32, help='Batch size')
     parser.add_argument('--step_loss', type=int, default=100, help='Decrease learning rate after how many epochs')
-    parser.add_argument('--lr', type=float, default=5e-4, help='Initial learning rate')
+    parser.add_argument('--lr', type=float, default=e-4, help='Initial learning rate')
     parser.add_argument('--lr_mode', default='poly', help='Learning rate policy, step or poly')
     parser.add_argument('--savedir', default='./results', help='Directory to save the results')
     parser.add_argument('--resume', default=True, help='Use this checkpoint to continue training | '
